@@ -1,0 +1,276 @@
+@font-face {
+  font-family: "Vazir";
+  src: url("../fonts/Vazir.eot");
+  src:
+    url("../fonts/Vazir-Medium.woff") format("woff"),
+    url("../fonts/Vazir.ttf") format("truetype");
+  font-weight: normal;
+}
+*{
+    font-family: 'Vazir';
+}
+body {
+  height: 100vh;
+  position: relative;
+  background-image: url("../images/login images/blurry-gradient-haikei.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.preLoader {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .preLoader.hidden {
+    display: none;
+  }
+  .preLoader div {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 10px solid #f65d4e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 10px solid transparent;
+    animation-name: preLoader;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+  }
+  .preLoader div div {
+    width: 10px;
+    height: 60px;
+    border-radius: 50%;
+    border: 10px solid #f66c17;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 10px solid transparent;
+    animation-name: preLoader;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+  }
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.login-page{
+    width: 330px !important;
+    height: 460px;
+    z-index: 10000;
+    background-color: white;
+    display: none;
+    border-radius: 10px;
+    flex-direction: column;
+    animation-name: animate;
+    animation-duration: .2s;
+    animation-timing-function: ease-in-out;
+  }
+  .login-page.active{
+    display: flex;
+  }
+  .login-page div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 1rem 0 1rem;
+    width: 100%;
+  }
+  .login-page .forms{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 80%;
+  }
+  .login-page .forms div{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+  }
+  .login-page .forms .button{
+    width: 95%;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    height: 40px;
+    background-color: #f65d4e;
+  }
+  .login-page .forms .recovery{
+    width: 100%;
+    margin-top: 1rem;
+    font-size: .9rem;
+    text-align: center;
+  }
+  .login-page .forms div label{
+    color: #4b4b4b;
+    font-family: 'vazir';
+  }
+  .login-page .forms div label span{
+    color: red;
+  }
+  .login-page .forms div input{
+    width: 95%;
+    padding: 10px 15px;
+    border-radius: 25px;
+    border: 1px solid #e6e6e6;
+    font-family: 'vazir';
+  }
+  .login-page .forms div input:focus{
+    outline: none;
+  }
+  .login-page .forms div input::placeholder{
+    color: #c1c1c1;
+    font-size: .9rem;
+    font-family: 'vazir'
+  }
+  .login-page h4 , .login-page a{
+    font-family: 'vazir';
+    text-decoration: none;
+  }
+  .login-page h4 {
+    color: #464646
+  }
+  .login-page a{
+    color: #a1a1a1;
+    font-weight: 100 !important;
+  }
+  .login-page a:hover{
+    color: rgba(0, 0, 0, 0.5);
+  }
+.signUp{
+    width: 100%;
+    text-align: center;
+    margin-top: 1rem;
+}
+.signUp-page{
+    width: 330px !important;
+    height: 485px;
+    z-index: 10000;
+    background-color: white;
+    display: none;
+    border-radius: 10px;
+    flex-direction: column;
+    animation-name: animate;
+    animation-duration: .2s;
+    animation-timing-function: ease-in-out;
+  }
+  .signUp-page.active{
+    display: flex;
+  }
+  .signUp-page div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 1rem 0 1rem;
+    width: 100%;
+  }
+  .signUp-page .forms{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 80%;
+  }
+  .signUp-page .forms div{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+  }
+  .signUp-page .forms .button{
+    width: 95%;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    height: 40px;
+    background-color: #f65d4e;
+  }
+  .signUp-page .forms .recovery{
+    width: 100%;
+    margin-top: 1rem;
+    font-size: .9rem;
+    text-align: center;
+  }
+  .signUp-page .forms div label{
+    color: #4b4b4b;
+    font-family: 'vazir';
+  }
+  .signUp-page .forms div label span{
+    color: red;
+  }
+  .signUp-page .forms div input{
+    width: 95%;
+    padding: 10px 15px;
+    border-radius: 25px;
+    border: 1px solid #e6e6e6;
+    font-family: 'vazir';
+  }
+  .signUp-page .forms div input:focus{
+    outline: none;
+  }
+  .signUp-page .forms div input::placeholder{
+    color: #c1c1c1;
+    font-size: .9rem;
+    font-family: 'vazir'
+  }
+  .signUp-page h4 , .signUp-page a{
+    font-family: 'vazir';
+    text-decoration: none;
+  }
+  .signUp-page h4 {
+    color: #464646
+  }
+  .signUp-page a{
+    color: #a1a1a1;
+    font-weight: 100 !important;
+  }
+  .signUp-page a:hover{
+    color: rgba(0, 0, 0, 0.5);
+  }
+.login {
+    width: 100%;
+    text-align: center;
+    margin-top: 1rem;
+}
+.login span{
+    text-decoration: underline;
+    color: rgba(0, 98, 255, 0.892);
+}
+@keyframes animate {
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+@keyframes preLoader {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
